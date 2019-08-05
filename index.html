@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Easter Test</title>
+</head>
+<body>
+  <h1>Easter Test</h1>
+  <input type="number" id="year" min="326" max="4099" onchange="updateDate();">
+  <p id="easterDate"></p>
+  <script type="text/javascript" src="easter.min.js"></script>
+  <script>
+  function updateDate() {
+    var input = document.getElementById('year')
+    var p = document.getElementById('easterDate')
+    p.innerHTML = 'Easter Sunday: ' + easter(input.value).toDateString()
+  }
+  </script>
+</body>
+</html>

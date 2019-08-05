@@ -1,0 +1,29 @@
+{
+  "name": "easter",
+  "version": "1.0.0",
+  "description": "Gets the date of Easter for a given year",
+  "author": "Matthew Brush <mbrush@codebrainz.ca>",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm run minify && node test.js",
+    "minify": "uglifyjs easter.js -o easter.min.js  -c -m --source-map \"filename='easter.js'\""
+  },
+  "keywords": [
+    "easter",
+    "date"
+  ],
+  "prettier": {
+    "semi": false,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "tabs": false,
+    "bracketSpacing": true,
+    "arrowParens": "always"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.6.0"
+  }
+}
